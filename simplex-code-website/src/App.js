@@ -6,6 +6,7 @@ import Grid from './components/Grid'
 import purpleBox from './purple-box-homepage-04.png'
 import bigGraphic from './homepage-illu-01 (2).png'
 import blobLightBulb from './blob-light-bulb-05.png'
+import footerImage from './footer-pattern-03.jpg'
 
 import CustomBtn from './components/CustomBtn'
 
@@ -61,7 +62,9 @@ const styles = makeStyles({
     width: "100%",
     margin: "auto",
     textAlign: "center",
-    backgroundColor: "#A288E3"
+    backgroundColor: "#A288E3",
+    marginTop: "1.2rem",
+    paddingBottom: "10px"
   },
   aboutLabel: {
     marginTop: "1rem",
@@ -88,7 +91,8 @@ const styles = makeStyles({
     background: "#383F51",
     color: "#fff",
     transform: "none",
-    marginLeft: "430px",
+    marginLeft: "425px",
+    marginBottom: "30px",
     "&:hover": {
       backgroundColor: "#4f25f7"
     },
@@ -101,20 +105,90 @@ const styles = makeStyles({
     color: "#383F51"
   },
   resourcesLabel: {
-    color: "#383F51"
+    color: "#383F51",
+    float: "left",
+    marginLeft: "100px",
   },
-  resourcesText: {
+  resourcesFirstText: {
+    paddingTop: "20px",
     marginTop: "2.1rem",
     fontSize: "20px",
-    paddingLeft: "25px",
+    paddingLeft: "100px",
+    paddingRight: "25px",
+    color: "#E6B1D9",
+    textAlign: 'left'
+  },
+  resourcesSecondText: {
+    paddingTop: "20px",
+    fontSize: "20px",
+    paddingLeft: "100px",
     paddingRight: "25px",
     color: "#383F51",
     paddingBottom: "10px",
     marginBottom: "1rem",
     textAlign: 'left'
   },
-  blobLightBulb: {
-    float: "right"
+  lightBulb: {
+    width: "80%",
+    float: "right",
+    marginRight: "-10rem",
+    marginTop: "-23rem"
+  },
+  resourcesButton: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "30px",
+    padding: "0 20px",
+    boxSizing: "border-box",
+    borderRadius: 4,
+    background: "#383F51",
+    color: "#fff",
+    transform: "none",
+    marginLeft: "100px",
+    "&:hover": {
+      backgroundColor: "#4f25f7"
+    },
+  },
+  supportSection: {
+    width: "100%",
+    margin: "auto",
+    textAlign: "center",
+    marginTop: "2rem",
+    paddingTop: "0.5rem",
+    backgroundColor: "#383F51",
+    paddingBottom: "30px"
+  },
+  supportLabel: {
+    marginTop: "1rem",
+    paddingTop: "2rem",
+    color: "#ffff",
+  },
+  supportText: {
+    marginTop: "2rem",
+    fontSize: "20px",
+    color: "#ffff",
+  },
+  supportButton: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "30px",
+    padding: "0 20px",
+    marginTop: "20px",
+    boxSizing: "border-box",
+    borderRadius: 4,
+    background: "#A288E3",
+    color: "#fff",
+    transform: "none",
+    marginLeft: "425px",
+    "&:hover": {
+      backgroundColor: "#4f25f7"
+    },
+  },
+  footerDesign: {
+    width: "100%",
+    height: "20%"
   },
   grid: {
     display: "flex",
@@ -144,12 +218,12 @@ function App() {
             About Us
           </Typography>
           <Typography variant="h5" className={classes.aboutText} color="primary">
-            Welcome to SimplexCode, an educational-technology platform that gives people in the early stages of their career the tools to
-            navigate the tech industry with confidence.
-            We provide beginner-friendly tech-related resources, facilitate workshops and classes and take part in panel discussions.
+            Welcome to SimplexCode, an educational-technology platform that gives <br></br>people in the early stages of their career the tools to
+            navigate the tech industry <br></br>with confidence.
+            We provide beginner-friendly tech-related resources, facilitate workshops <br></br>and classes and take part in panel discussions.
             <br></br>
             <br></br>
-             We are open to providing services to schools, universities, private business and more. If you would like to book one of our services,
+             We are open to providing services to schools, universities, private business and more. <br></br>If you would like to book one of our services,
              get in touch!
           </Typography>
           <button className={classes.aboutButton}>Read More</button>
@@ -159,21 +233,50 @@ function App() {
           <Typography variant="h4" className={classes.resourcesLabel} color="#383F51">
             Resources
           </Typography>
-          <Typography variant="h5" className={classes.resourcesText} color="#383F51">
+          <Typography variant="h5" className={classes.resourcesFirstText} color="#383F51">
             Careers - Coding - Tech and more
-            <br></br>
-            <br></br>
-             Here you'll find info sheets and other helpful
-             <br></br> 
-             material to build your understanding of tech.
           </Typography>
-          <button>
+          <Typography variant="h5" className={classes.resourcesSecondText} color="#383F51">
+            Here you'll find info sheets and
+             <br></br>
+             other helpful material to build
+            <br></br>
+            your understanding of the tech industry.
+          </Typography>
+          <button className={classes.resourcesButton}>
             Check Them Out
           </button>
         </div>
         <div>
-          <img src={blobLightBulb} className={classes.purpleBox} />
+          <img src={blobLightBulb} className={classes.lightBulb} />
         </div>
+
+        <div className={classes.supportSection}>
+          <Typography variant="h4" className={classes.supportLabel} color="primary">
+            Support Us
+          </Typography>
+          <Typography variant="h5" className={classes.supportText} color="primary">
+            We are trying to provide tech resources, workshops and coding
+            <br></br>
+            classes for underrepresented people who are trying to break into
+            <br></br>
+             the tech industry. SimplexCode consists of a team of enthusiastic
+             <br></br>
+             volunteers who make things run smoothly.
+             <br></br>
+             <br></br>
+             With your donations, we'll be able to provide resources for those who need
+             <br></br>
+             it and ensure information surrounding tech industry is accessible.
+          </Typography>
+          <button className={classes.supportButton}>
+            Donate to us!
+          </button>
+        </div>
+        <div>
+          <img src={footerImage} className={classes.footerDesign}/>
+        </div>
+
       </ThemeProvider>
     </div>
   );
