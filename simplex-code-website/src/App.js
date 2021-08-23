@@ -9,6 +9,11 @@ import Home from './components/Home'
 import './App.css';
 import About from './components/About';
 
+// TO DO
+// Refactor code on this page - put styles in .css file
+// Create folder for images
+//Create READ ME file
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -215,6 +220,7 @@ function App() {
             <Route path="/events" exact component={Events} />
             <Route path="/about" exact component={About} />
             <Route path="/home" exact component={Home} />
+            <Route path="/" exact component={Home} />
           </Switch>
 
         </ThemeProvider>
