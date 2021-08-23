@@ -1,13 +1,12 @@
-// HOMEPAGE
-import React from 'react'
+//HOME PAGE
+import React from 'react';
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
-import NavBar from './components/NavBar'
-import { Router, Route, Link, BrowserRouter, Switch } from "react-router-dom";
-import Events from './components/Events'
-import Home from './components/Home'
-
-import './App.css';
-import About from './components/About';
+import { Typography } from '@material-ui/core';
+import purpleBox from '../purple-box-homepage-04.png'
+import bigGraphic from '../homepage-illu-01 (2).png'
+import blobLightBulb from '../blob-light-bulb-05.png'
+import footerImage from '../footer-pattern-03.jpg'
+import '../App.css';
 
 const theme = createMuiTheme({
   palette: {
@@ -203,24 +202,85 @@ const styles = makeStyles({
   },
 })
 
-function App() {
+function HomeFunction() {
   const classes = styles();
 
   return (
-    <BrowserRouter>
       <div className="App">
         <ThemeProvider theme={theme}>
-          <NavBar />
-          <Switch>
-            <Route path="/events" exact component={Events} />
-            <Route path="/about" exact component={About} />
-            <Route path="/home" exact component={Home} />
-          </Switch>
+          <div className={`${classes.grid} ${classes.littleSpace}`}>
+            <img src={purpleBox} className={classes.purpleBox} />
+            <img src={bigGraphic} className={classes.bigGraphic} />
+          </div>
+
+          <div className={classes.aboutSection}>
+            <Typography variant="h4" className={classes.aboutLabel} color="primary">
+              About Us
+          </Typography>
+            <Typography variant="h5" className={classes.aboutText} color="primary">
+              Welcome to SimplexCode, an educational-technology platform that gives <br></br>people in the early stages of their career the tools to
+            navigate the tech industry <br></br>with confidence.
+            We provide beginner-friendly tech-related resources, facilitate workshops <br></br>and classes and take part in panel discussions.
+            <br></br>
+              <br></br>
+             We are open to providing services to schools, universities, private business and more. <br></br>If you would like to book one of our services,
+             get in touch!
+          </Typography>
+            <button className={classes.aboutButton}>Read More</button>
+          </div>
+
+          <div className={classes.resourcesSection}>
+            <Typography variant="h4" className={classes.resourcesLabel} color="#383F51">
+              Resources
+          </Typography>
+            <Typography variant="h5" className={classes.resourcesFirstText} color="#383F51">
+              Careers - Coding - Tech and more
+          </Typography>
+            <Typography variant="h5" className={classes.resourcesSecondText} color="#383F51">
+              Here you'll find info sheets and
+             <br></br>
+             other helpful material to build
+            <br></br>
+            your understanding of technical concepts.
+          </Typography>
+            <button className={classes.resourcesButton}>
+              Check Them Out
+          </button>
+          </div>
+          <div>
+            <img src={blobLightBulb} className={classes.lightBulb} />
+          </div>
+
+          <div className={classes.supportSection}>
+            <Typography variant="h4" className={classes.supportLabel} color="primary">
+              Support Us
+          </Typography>
+            <Typography variant="h5" className={classes.supportText} color="primary">
+              We are trying to provide tech resources, workshops and coding
+            <br></br>
+            classes for underrepresented people who are trying to break into
+            <br></br>
+             the tech industry. SimplexCode consists of a team of enthusiastic
+             <br></br>
+             volunteers who make things run smoothly.
+             <br></br>
+              <br></br>
+             With your donations, we'll be able to provide resources for those who need
+             <br></br>
+             it and ensure information surrounding tech industry is accessible.
+          </Typography>
+            <button className={classes.supportButton}>
+              Donate to us!
+          </button>
+          </div>
+          <div className={classes.footerContainer}>
+            <Typography variant="h5" className={classes.footerText}>© 2021 SimplexCode</Typography>
+            <img src={footerImage} className={classes.footerImage} />
+          </div>
 
         </ThemeProvider>
       </div>
-    </BrowserRouter>
   );
 }
 
-export default App;
+export default HomeFunction;

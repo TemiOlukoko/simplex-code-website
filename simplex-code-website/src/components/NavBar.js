@@ -1,10 +1,9 @@
 import React from 'react'
 import CustomBtn from './CustomBtn'
 import logo from '../purple-symbol-04-04.png'
-import logoMobile from '../logoMobile.svg'
-import simplex from '../purple-symbol-04-04.png'
 import {Toolbar, Typography} from '@material-ui/core'
 import {makeStyles} from "@material-ui/core/styles";
+import {Router, Route, Link, BrowserRouter, Switch} from "react-router-dom";
 
 const styles = makeStyles({
     bar:{
@@ -43,12 +42,13 @@ const styles = makeStyles({
 function NavBar() {
     const classes = styles()
     return (
+        <BrowserRouter>
             <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>   
                 <img src={logo} className={classes.logo}/> 
                 {/* <img src={simplex} className={classes.simplex}/>  */}
                 {/* <img src={logoMobile} className={classes.logoMobile}/>  */}
                 <Typography variant="h6" className={classes.menuItem}>
-                   Events
+                    Events
                 </Typography>
                 <Typography variant="h6" className={classes.menuItem}>
                     Resources
@@ -64,6 +64,7 @@ function NavBar() {
                 </Typography>
                 <CustomBtn txt="Donate"/>
             </Toolbar>
+        </BrowserRouter>
     )
 }
 
