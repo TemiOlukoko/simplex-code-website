@@ -5,13 +5,15 @@ import NavBar from './components/NavBar'
 import { Router, Route, Link, BrowserRouter, Switch } from "react-router-dom";
 import Events from './components/Events'
 import Home from './components/Home'
-
-import './App.css';
 import About from './components/About';
 
-// TO DO
+import './App.css';
+
+
+// TO DO:
 // Refactor code on this page - put styles in .css file
 // Create folder for images
+// Styling for navbar
 //Create READ ME file
 
 const theme = createMuiTheme({
