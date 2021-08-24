@@ -2,19 +2,19 @@
 import React from 'react'
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import NavBar from './components/NavBar'
-import { Router, Route, Link, BrowserRouter, Switch } from "react-router-dom";
+import Footer from './components/Footer'
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 import Events from './components/Events'
 import Home from './components/Home'
 import About from './components/About';
-
 import './App.css';
 
 
 // TO DO:
 // Refactor code on this page - put styles in .css file
-// Create folder for images
 // Styling for navbar
-//Create READ ME file
+// Fix footer file code
+// Create READ ME file
 
 const theme = createMuiTheme({
   palette: {
@@ -185,23 +185,6 @@ const styles = makeStyles({
       backgroundColor: "#4f25f7"
     },
   },
-  footerImage: {
-    width: "100%",
-    height: "20%"
-  },
-  footerContainer: {
-    color: "pink"
-  },
-  footerText: {
-    color: "#383F51",
-    position: "absolute",
-    width: "100%",
-    top: "1750px",
-    right: "370px",
-    fontSize: "0.9em",
-    textAlign: "center",
-    bottom: "0"
-  },
   grid: {
     display: "flex",
     justifyContent: "center",
@@ -224,7 +207,6 @@ function App() {
             <Route path="/home" exact component={Home} />
             <Route path="/" exact component={Home} />
           </Switch>
-
         </ThemeProvider>
       </div>
     </BrowserRouter>

@@ -2,11 +2,11 @@
 import React from 'react';
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
-import purpleBox from '../purple-box-homepage-04.png'
-import bigGraphic from '../homepage-illu-01 (2).png'
-import blobLightBulb from '../blob-light-bulb-05.png'
-import footerImage from '../footer-pattern-03.jpg'
+import purpleBox from '../images/purple-box-homepage-04.png'
+import bigGraphic from '../images/homepage-illu-01 (2).png'
+import blobLightBulb from '../images/blob-light-bulb-05.png'
 import '../App.css';
+import Footer from './Footer';
 
 const theme = createMuiTheme({
   palette: {
@@ -177,23 +177,6 @@ const styles = makeStyles({
       backgroundColor: "#4f25f7"
     },
   },
-  footerImage: {
-    width: "100%",
-    height: "20%"
-  },
-  footerContainer: {
-    color: "pink"
-  },
-  footerText: {
-    color: "#383F51",
-    position: "absolute",
-    width: "100%",
-    top: "1750px",
-    right: "370px",
-    fontSize: "0.9em",
-    textAlign: "center",
-    bottom: "0"
-  },
   grid: {
     display: "flex",
     justifyContent: "center",
@@ -273,11 +256,8 @@ function HomeFunction() {
               Donate to us!
           </button>
           </div>
-          <div className={classes.footerContainer}>
-            <Typography variant="h5" className={classes.footerText}>© 2021 SimplexCode</Typography>
-            <img src={footerImage} className={classes.footerImage} />
-          </div>
 
+          <Footer/>
         </ThemeProvider>
       </div>
   );

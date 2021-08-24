@@ -1,14 +1,10 @@
 import React from 'react'
 import CustomBtn from './CustomBtn'
-import logo from '../purple-symbol-04-04.png'
+import logo from '../images/purple-symbol-04-04.png'
 import { Toolbar, Typography } from '@material-ui/core'
 import { makeStyles } from "@material-ui/core/styles";
-import { Router, Route, Link, BrowserRouter, Switch } from "react-router-dom";
-import Events from '../components/Events'
+import { Link } from "react-router-dom";
 import '../App.css';
-import Home from '../components/Home'
-import About from '../components/About';
-
 
 const styles = makeStyles({
     bar: {
