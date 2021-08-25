@@ -14,9 +14,6 @@ const styledEvents = makeStyles ({
     mainText: {
         color: '#383F51',
         marginTop: "1.8rem",
-        fontFamily: [
-            'Roboto'
-          ],
         fontSize: 16,
         lineHeight: '0.2rem',
         marginBottom: '2.0rem'
@@ -51,7 +48,6 @@ const styledEvents = makeStyles ({
         color: '#E6B1D9',
         marginTop: '0rem',
         fontSize: '12px',
-
     },
     EventDescriptionText: {
         marginLeft: '29rem',
@@ -123,7 +119,7 @@ function Events(){
         </button>
 
         {/* SimplexCode & Cheetah Code Academy */}
-        <img src={cheetahCode} className={classes.EventImage}/>
+        {/* <img src={cheetahCode} className={classes.EventImage}/>
         
         <div className={classes.EventPinkText}>
             <ul>SimplexCode x Cheetah Code Academy</ul>
@@ -146,7 +142,7 @@ function Events(){
 
         <button className={classes.signUpButton}>
               Sign up
-        </button>
+        </button> */}
 
         <Footer/>
         </div>
