@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { makeStyles } from "@material-ui/core/styles";
 import logo from '../images/purple-symbol-04-04.png'
+import CustomBtn from './CustomBtn'
 
 
 import {
@@ -25,14 +26,20 @@ import {
     },
     navBarLink: {
         margin: '20px',
+        textDecoration: 'none',
+        color: '#383F51',
       },
       logo: {
         width: "20%",
         float: 'left',
         paddingLeft: '25px',
+        paddingTop: '7px',
         ['@media (max-width:780px)']: {
             display: "none"
         }
+    },
+    button: {
+        width: '-10px',
     },
 })
 const NavbarTest = () => {
@@ -62,9 +69,10 @@ const NavbarTest = () => {
                     Contact
                 </NavLink>
             </NavMenu>
-            <NavBtn>
-                <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+            <NavBtn className={classes.button}>
+                <NavBtnLink to='/signin'>Donate</NavBtnLink>
             </NavBtn>
+            {/* <CustomBtn txt="Donate" className={classes.button}/> */}
         </Nav>
         </>
     )
