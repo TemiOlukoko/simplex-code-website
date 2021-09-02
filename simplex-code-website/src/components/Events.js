@@ -144,7 +144,6 @@ function Events(){
               Sign up
         </button> */}
 
-        <Footer/>
         </div>
     );
 }

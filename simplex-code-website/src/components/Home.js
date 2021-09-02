@@ -257,7 +257,6 @@ function HomeFunction() {
           </button>
           </div>
 
-          <Footer/>
         </ThemeProvider>
       </div>
   );

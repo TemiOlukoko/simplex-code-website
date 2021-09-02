@@ -29,6 +29,7 @@ function App() {
             <Route path="/home" exact component={Home} />
             <Route path="/" exact component={Home} />
           </Switch>
+          <Footer/>
       </div>
     </BrowserRouter>
   );

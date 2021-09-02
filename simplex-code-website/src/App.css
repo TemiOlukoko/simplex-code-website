@@ -2,6 +2,7 @@
 
 * {
   font-family: 'Montserrat', sans-serif;
+  border: 1px solid red; 
 }
 .App {
   text-align: center;

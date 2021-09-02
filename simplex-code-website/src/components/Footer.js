@@ -1,58 +1,46 @@
 import React from 'react'
-import { Typography } from '@material-ui/core'
 import { makeStyles } from "@material-ui/core/styles";
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import footerImage from '../images/footer-pattern-03.jpg'
-import '../App.css';
+import footerImage from '../images/footer-pattern-03.jpg';
+import linkedinIcon from '../images/linkedin-icon.png';
+import instagramIcon from '../images/instagram-icon.png';
+import twitterIcon from '../images/twitter-icon.png';
+import tiktokIcon from '../images/tiktok-icon.png';
+import { Link } from "react-router-dom";
 
-const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: "#2e1667",
-      },
-      secondary: {
-        main: "#c7d8ed",
-      },
-    },
-    typography: {
-      fontFamily: [
-        'Roboto'
-      ],
-      h4: {
-        fontWeight: 600,
-        fontSize: 28,
-        lineHeight: '2rem',
-      },
-      h5: {
-        fontWeight: 100,
-        lineHeight: '2rem',
-      },
-    },
-  });
+import '../App.css';
   
   const styles = makeStyles({
+    App: {
+      // marginBottom: -5
+    },
     footerImage: {
       width: "100%",
-      height: "20%"
+      paddingBottom: "-10px"
     },
-    footerContainer: {
-      color: "pink"
+    
+    copyright: {
+      color: '#000',
+      lineHeight: '0px',
+      fontSize: '0.8em',
+      textAlign: 'left',
+      position: 'relative',
+      top: '-100px',
+      left: '50px',
     },
-    footerText: {
-      color: "#383F51",
-      position: "absolute",
-      width: "100%",
-      top: "1000px",
-      right: "370px",
-      fontSize: "0.9em",
-      textAlign: "center",
-      bottom: "0"
+    socialMediaIcons: {
+      width: "3%",
+      marginRight: '50px',
+      position: 'relative',
+      top: '-70px',
+      left: '80px',
     },
-    grid: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexWrap: "wrap",
+    firstSocialIcon: {
+      width: "3%",
+      marginRight: '50px',
+      marginLeft: '450px',
+      position: 'relative',
+      top: '-70px',
+      left: '80px',
     },
   })
 
@@ -60,16 +48,19 @@ const theme = createMuiTheme({
     const classes = styles();
   
     return (
-        <div className="App">
-          <ThemeProvider theme={theme}>
+        <div className={classes.App}>
 
-            <div className={classes.footerContainer}>
-              {/* <Typography variant="h5" className={classes.footerText}>© 2021 SimplexCode</Typography> */}
-              <img src={footerImage} className={classes.footerImage} />
-            </div>
-  
-          </ThemeProvider>
+            <img src={footerImage} className={classes.footerImage} />
+
+              <img src={linkedinIcon} className={classes.firstSocialIcon} />
+              <img src={instagramIcon} className={classes.socialMediaIcons} />
+              <img src={twitterIcon} className={classes.socialMediaIcons} />
+              <img src={tiktokIcon} className={classes.socialMediaIcons} />
+
+              <p className={classes.copyright}>© 2021 SimplexCode</p>
+
         </div>
+
     );
   }
 
